@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Correção de Redação por IA (Gemini)</h2>
+
+  <label for="tema">Tema</label>
+  <input id="tema" type="text" [(ngModel)]="tema" />
+
+  <label for="texto">Texto da Redação</label>
+  <textarea id="texto" rows="10" [(ngModel)]="texto"></textarea>
+
+  <button (click)="enviar()" [disabled]="!tema || !texto || carregando">
+    {{ carregando ? 'Corrigindo...' : 'Enviar para Correção' }}
+  </button>
+
+  <div *ngIf="erro" style="color: red; margin-top: 10px;">
+    <pre>{{ erro }}</pre>
+  </div>
+
+
+  <div *ngIf="resultado" style="margin-top: 20px;">
+    <h3>Resultado da Correção</h3>
+    <pre>{{ resultado}}</pre>
+  </div>
+</div>
