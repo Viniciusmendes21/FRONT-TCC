@@ -1,31 +1,123 @@
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
+.correcao-container {
+  max-width: 540px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 32px 28px;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-input, textarea {
+h2 {
+  text-align: center;
+  margin-bottom: 28px;
+  color: #2d3748;
+}
+
+.correcao-form .form-group {
+  margin-bottom: 20px;
+}
+
+.correcao-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.correcao-form input,
+.correcao-form textarea {
   width: 100%;
-  padding: 8px;
-  margin-bottom: 12px;
+  padding: 10px 12px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
   font-size: 1rem;
-  box-sizing: border-box;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  resize: vertical;
+  background: #f8fafc;
+  transition: border-color 0.2s;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 6px;
+.correcao-form input:focus,
+.correcao-form textarea:focus {
+  border-color: #6366f1;
+  outline: none;
+}
+
+.btn-enviar {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #6366f1 60%, #60a5fa 100%);
+  color: #fff;
   border: none;
-  background-color: #007bff;
-  color: white;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
   cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(99,102,241,0.08);
 }
 
-  button:disabled {
-    background-color: #6c757d;
-    cursor: not-allowed;
+.btn-enviar:disabled {
+  background: #a5b4fc;
+  cursor: not-allowed;
+}
+
+.erro-msg {
+  margin-top: 24px;
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 0.98rem;
+  white-space: pre-wrap;
+}
+
+.resultado-card {
+  margin-top: 32px;
+  background: #f1f5f9;
+  border-radius: 10px;
+  padding: 22px 18px;
+  box-shadow: 0 2px 8px rgba(59,130,246,0.07);
+}
+
+.resultado-card h3 {
+  margin-top: 0;
+  color: #2563eb;
+  margin-bottom: 12px;
+}
+
+.criterio {
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.nota {
+  float: right;
+  color: #6366f1;
+  font-weight: bold;
+}
+
+.comentario {
+  margin-top: 6px;
+  color: #374151;
+  font-size: 0.98rem;
+}
+
+.media-geral {
+  margin-top: 18px;
+  font-size: 1.15rem;
+  text-align: right;
+}
+
+.nota-final {
+  color: #2563eb;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 600px) {
+  .correcao-container {
+    padding: 18px 6px;
   }
+}

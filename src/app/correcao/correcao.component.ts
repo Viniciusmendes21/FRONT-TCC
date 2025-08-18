@@ -27,7 +27,7 @@ export class CorrecaoComponent {
 
     const body = { tema: this.tema, texto: this.texto };
 
-    this.http.post<any>('https://localhost:7023/api/correcao/gemini', body)
+    this.http.post<any>('https://stunning-space-happiness-579g67wj7gj24g49-5096.app.github.dev/api/Correcao/gemini', body)
       .subscribe({
         next: res => {
           this.resultado = res;
