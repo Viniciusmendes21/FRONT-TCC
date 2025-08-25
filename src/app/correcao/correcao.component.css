@@ -1,94 +1,118 @@
 .correcao-container {
   max-width: 540px;
-  margin: 40px auto;
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-  padding: 32px 28px;
+  margin: 48px auto;
+  background: rgba(255,255,255,0.85);
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(60,72,100,0.18);
+  padding: 40px 32px;
   font-family: 'Segoe UI', Arial, sans-serif;
+  backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(99,102,241,0.10);
 }
 
 h2 {
   text-align: center;
-  margin-bottom: 28px;
-  color: #2d3748;
+  margin-bottom: 32px;
+  color: #1e293b;
+  font-size: 2.1rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
 }
 
 .correcao-form .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .correcao-form label {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 7px;
   font-weight: 600;
-  color: #374151;
+  color: #334155;
+  letter-spacing: 0.2px;
 }
 
 .correcao-form input,
 .correcao-form textarea {
   width: 100%;
-  padding: 10px 12px;
+  padding: 12px 14px;
   border: 1.5px solid #cbd5e1;
-  border-radius: 8px;
-  font-size: 1rem;
-  background: #f8fafc;
-  transition: border-color 0.2s;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  background: rgba(248,250,252,0.95);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(99,102,241,0.04);
 }
 
 .correcao-form input:focus,
 .correcao-form textarea:focus {
   border-color: #6366f1;
+  box-shadow: 0 0 0 2px #6366f133;
   outline: none;
 }
 
 .btn-enviar {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   background: linear-gradient(90deg, #6366f1 60%, #60a5fa 100%);
   color: #fff;
   border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
+  border-radius: 10px;
+  font-size: 1.15rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: background 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  box-shadow: 0 2px 12px rgba(99,102,241,0.10);
+  letter-spacing: 0.5px;
+}
+
+.btn-enviar:hover:not(:disabled) {
+  background: linear-gradient(90deg, #818cf8 60%, #38bdf8 100%);
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 4px 18px rgba(99,102,241,0.13);
 }
 
 .btn-enviar:disabled {
   background: #a5b4fc;
   cursor: not-allowed;
+  opacity: 0.7;
 }
 
 .erro-msg {
-  margin-top: 24px;
-  background: #fee2e2;
+  margin-top: 28px;
+  background: #fee2e2cc;
   color: #b91c1c;
-  border: 1px solid #fecaca;
-  border-radius: 8px;
-  padding: 16px;
-  font-size: 0.98rem;
+  border: 1.5px solid #fecaca;
+  border-radius: 10px;
+  padding: 18px;
+  font-size: 1rem;
   white-space: pre-wrap;
+  box-shadow: 0 2px 8px rgba(239,68,68,0.07);
 }
 
 .resultado-card {
-  margin-top: 32px;
-  background: #f1f5f9;
-  border-radius: 10px;
-  padding: 22px 18px;
-  box-shadow: 0 2px 8px rgba(59,130,246,0.07);
+  margin-top: 36px;
+  background: rgba(241,245,249,0.95);
+  border-radius: 14px;
+  padding: 26px 20px;
+  box-shadow: 0 2px 12px rgba(59,130,246,0.09);
+  transition: box-shadow 0.2s;
+}
+
+.resultado-card:hover {
+  box-shadow: 0 6px 24px rgba(59,130,246,0.13);
 }
 
 .resultado-card h3 {
   margin-top: 0;
   color: #2563eb;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 .criterio {
-  margin-bottom: 18px;
-  padding-bottom: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -96,28 +120,33 @@ h2 {
   float: right;
   color: #6366f1;
   font-weight: bold;
+  font-size: 1.08rem;
 }
 
 .comentario {
-  margin-top: 6px;
+  margin-top: 8px;
   color: #374151;
-  font-size: 0.98rem;
+  font-size: 1rem;
 }
 
 .media-geral {
-  margin-top: 18px;
-  font-size: 1.15rem;
+  margin-top: 22px;
+  font-size: 1.18rem;
   text-align: right;
+  color: #334155;
 }
 
 .nota-final {
   color: #2563eb;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.35rem;
 }
 
 @media (max-width: 600px) {
   .correcao-container {
     padding: 18px 6px;
+  }
+  .resultado-card {
+    padding: 16px 6px;
   }
 }

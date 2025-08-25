@@ -4,13 +4,31 @@
   <form (ngSubmit)="enviar()" class="correcao-form" autocomplete="off">
     <div class="form-group">
       <label for="tema">Tema</label>
-      <input id="tema" type="text" [(ngModel)]="tema" name="tema" required placeholder="Digite o tema da redação" />
+      <input
+        id="tema"
+        type="text"
+        [(ngModel)]="tema"
+        name="tema"
+        required
+        placeholder="Digite o tema da redação"
+      />
     </div>
     <div class="form-group">
       <label for="texto">Texto da Redação</label>
-      <textarea id="texto" rows="8" [(ngModel)]="texto" name="texto" required placeholder="Digite seu texto aqui"></textarea>
+      <textarea
+        id="texto"
+        rows="8"
+        [(ngModel)]="texto"
+        name="texto"
+        required
+        placeholder="Digite seu texto aqui"
+      ></textarea>
     </div>
-    <button type="submit" [disabled]="!tema || !texto || carregando" class="btn-enviar">
+    <button
+      type="submit"
+      [disabled]="!tema || !texto || carregando"
+      class="btn-enviar"
+    >
       {{ carregando ? 'Corrigindo...' : 'Enviar para Correção' }}
     </button>
   </form>
@@ -22,27 +40,27 @@
   <div *ngIf="resultado?.success" class="resultado-card">
     <h3>Resultado da Correção</h3>
     <div class="criterio">
-      <strong>Domínio da Escrita Formal:</strong>
-      <span class="nota">{{ resultado.dominio_escrita_formal.nota }}/200</span>
-      <div class="comentario">{{ resultado.dominio_escrita_formal.comentarios }}</div>
-    </div>
-    <div class="criterio">
-      <strong>Compreensão do Tema:</strong>
+      <span><strong>Compreensão do Tema e Proposta:</strong></span>
       <span class="nota">{{ resultado.compreensao_tema_proposta.nota }}/200</span>
       <div class="comentario">{{ resultado.compreensao_tema_proposta.comentarios }}</div>
     </div>
     <div class="criterio">
-      <strong>Argumentação:</strong>
-      <span class="nota">{{ resultado.argumentacao.nota }}/200</span>
-      <div class="comentario">{{ resultado.argumentacao.comentarios }}</div>
-    </div>
-    <div class="criterio">
-      <strong>Coesão e Coerência:</strong>
+      <span><strong>Coesão e Coerência:</strong></span>
       <span class="nota">{{ resultado.coesao_coerencia.nota }}/200</span>
       <div class="comentario">{{ resultado.coesao_coerencia.comentarios }}</div>
     </div>
     <div class="criterio">
-      <strong>Proposta de Intervenção:</strong>
+      <span><strong>Argumentação:</strong></span>
+      <span class="nota">{{ resultado.argumentacao.nota }}/200</span>
+      <div class="comentario">{{ resultado.argumentacao.comentarios }}</div>
+    </div>
+    <div class="criterio">
+      <span><strong>Domínio da Escrita Formal:</strong></span>
+      <span class="nota">{{ resultado.dominio_escrita_formal.nota }}/200</span>
+      <div class="comentario">{{ resultado.dominio_escrita_formal.comentarios }}</div>
+    </div>
+    <div class="criterio">
+      <span><strong>Proposta de Intervenção:</strong></span>
       <span class="nota">{{ resultado.proposta_intervencao.nota }}/200</span>
       <div class="comentario">{{ resultado.proposta_intervencao.comentarios }}</div>
     </div>
