@@ -48,7 +48,7 @@ export class CorrecaoComponent {
       formData.append('texto', this.texto);
     }
 
-    this.http.post<any>('https://stunning-space-happiness-579g67wj7gj24g49-5096.app.github.dev/api/Correcao', formData)
+    this.http.post<any>('https://ideal-xylophone-579g67wj9rpfrw9-5096.app.github.dev/api/Correcao', formData)
       .subscribe({
         next: res => {
           this.resultado = res;
@@ -75,7 +75,7 @@ export class CorrecaoComponent {
 
     const body = { tema: this.tema, texto: this.texto };
 
-    this.http.post<any>('https://stunning-space-happiness-579g67wj7gj24g49-5096.app.github.dev/api/Correcao/gemini', body)
+    this.http.post<any>('https://ideal-xylophone-579g67wj9rpfrw9-5096.app.github.dev/api/Correcao/gemini', body)
       .subscribe({
         next: res => {
           this.resultado = res;
